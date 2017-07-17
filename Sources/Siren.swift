@@ -381,12 +381,7 @@ private extension Siren {
     func localizedNewVersionMessage() -> String {
         let newVersionMessageToLocalize = "A new version of %@ is available. Please update to version %@ now."
         let newVersionMessage = Bundle().localizedString(stringKey: newVersionMessageToLocalize, forceLanguageLocalization: forceLanguageLocalization)
-
-        guard let currentAppStoreVersion = currentAppStoreVersion else {
-            return String(format: newVersionMessage, appName, "Unknown")
-        }
-
-        return String(format: newVersionMessage, appName, currentAppStoreVersion)
+				return newVersionMessage
     }
 
     func localizedUpdateButtonTitle() -> String {
