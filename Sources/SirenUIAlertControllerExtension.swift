@@ -14,7 +14,7 @@ internal extension UIAlertController {
     func show() {
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.rootViewController = SirenViewController()
-        window.windowLevel = UIWindowLevelAlert + 1
+        window.windowLevel = UIWindow.Level.alert + 1
 
         Siren.shared.updaterWindow = window
 
